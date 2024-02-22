@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 import './settings.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
@@ -56,7 +57,9 @@ class _MainAppState extends State<MainApp> {
       Expanded(
         child: Container(
           color: Theme.of(context).colorScheme.primaryContainer,
-          child: page,
+          child: SafeArea(
+            child: page,
+          ),
         ),
       )
     ]));
